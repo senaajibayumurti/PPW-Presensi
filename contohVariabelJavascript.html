@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bljr var dalam JS</title>
+    <script>
+
+        //DASAR-DASAR VARIABEL
+        //==> Penamaan variabel tidak boleh menggunakan angka di depannya.
+        //==> Penamaan variabel boleh menggunakan awalan underscore.
+        //==> Penamaan variabel dianjurkan menggunakan camelCase.
+        //==> Penamaan variabel dianjurkan menggunakan kosa kata bahasa inggris.
+
+        //==> Membuat variabel
+        var name = "Petani Kode";
+        var visitorCount = 50322;
+        var isActive = true;
+        var url = "https://www.petanikode.com";
+
+        //==> Menghapus variabel
+        delete visitorCount;
+
+        //==> Menampilkan variabel ke jendela dialog (alert)
+        alert("Selamat datang di "+ name);
+
+        //==> Menampilkan variabel ke dalam HTML
+        document.write("Nama Situs: " + name + "<br>");
+        document.write("Jumlah Pengunjung: " + visitorCount + "<br>");
+        document.write("Status Aktif: " + isActive + "<br>");
+        document.write("Alamat URL: " + url + "<br>");
+
+        //DIALOG CONFIRM
+        var yakin = confirm("Apakah kamu yakin akan mengunjungi petanikode?")
+
+        if (yakin){
+            window.location = "https://www.petanikode.com";
+        }
+        else {
+            document.write("Baiklah, tetap di sini saja ya... :>")
+        }
+
+        //DIALOG PROMPT
+        var nama = prompt("Siapa nama kamu?", "");
+        document.write("<p>Hello " + nama + "</p>");
+
+        //DASAR-DASAR OPERATOR DI JAVASCRIPT
+        //==> Operator di Javascript (+, -, *, **, /, %)
+        var a = 5;
+        var b = 3;
+
+        var aStr = "5";
+        var bStr = "3";
+
+        //==> Menggunakan operator penjumlahan
+        var c = a + b;
+        var cStr = aStr + bStr;
+        console.log(c);
+        console.log(cStr);
+
+    </script>
+</head>
+<body>
+    <button onclick="alert('Tombol diklik!')">Klik aku say :P</button>
+    <br>
+    <script>
+        //==> Operator Penugasan  (=, +=, -=, *=, **=, /=, %=)
+        var jumlahView = 12;
+        jumlahView += 1;
+
+        document.write("Mula-mula nilai score...<br>");
+        //==> ==> pengisian nilai
+        var score = 100;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pengisian dan menjumlahkan dengan 5
+        score += 5;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pengisian dan pengurangan dengan 2
+        score -= 2;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pengisian dan pengalian dengan 2
+        score *= 2;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pengisian dan pembagian dengan 4
+        score /= 4;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pengisian dan pemangkatan dengan 2
+        score **= 2;
+        document.write("score ="+ score +"<br/>");
+
+        //==> ==> pembagian dan modulo dengan 3
+        score %= 3;
+        document.write("score ="+ score +"<br/>");
+        document.write("<br/>")
+
+        //==> Operator Relasi (>, <, == atau ===, != atau !==, >=, <=)
+        var aku = 20;
+        var kamu = 19;
+
+        //==> ==> sama dengan
+        var hasil = aku == kamu;
+        document.write(`${aku} == ${kamu} = ${hasil}<br/>`);
+
+        //==> ==> lebih besar
+        var hasil = aku > kamu;
+        document.write(`${aku} > ${kamu} = ${hasil}<br/>`);
+
+        //==> ==> lebih besar sama dengan
+        var hasil = aku >= kamu;
+        document.write(`${aku} >= ${kamu} = ${hasil}<br/>`);
+
+        //==> ==> lebih kecil
+        var hasil = aku < kamu;
+        document.write(`${aku} < ${kamu} = ${hasil}<br/>`);
+
+        //==> ==> lebih kecil sama dengan
+        var hasil = aku <= kamu;
+        document.write(`${aku} <= ${kamu} = ${hasil}<br/>`);
+
+        //==> ==> tidak sama dengan
+        var hasil = aku != kamu;
+        document.write(`${aku} != ${kamu} = ${hasil}<br/>`);
+        document.write("<br/>")
+
+        //==> Operasi logika (&&, ||, !)
+        var aku = 20;
+        var kamu = 19;
+
+        var benar = aku > kamu;
+        var salah = aku < kamu;
+
+        //==> ==> AND
+        var hasil = benar && salah;
+        document.write(`${benar} && ${salah} = ${hasil}<br/>`);
+
+        //==> ==> OR
+        var hasil = benar || salah;
+        document.write(`${benar} || ${salah} = ${hasil}<br/>`);
+
+        //==> ==> NOT
+        var hasil = !benar;
+        document.write(`!${benar} = ${hasil}<br/>`);
+        document.write("<br/>")
+
+        //==> Operator bitwise (&, |, ^, ~, <<, >>, <<<, >>>)
+        var x = 4;
+        var y = 3;
+
+        //==> ==> AND
+        var hasil = x & y;
+        document.write(`${x} & ${y} = ${hasil}<br/>`)
+
+        //==> ==> OR
+        var hasil = x | y;
+        document.write(`${x} | ${y} = ${hasil}<br/>`)
+        
+        //==> ==> XOR
+        var hasil = x ^ y;
+        document.write(`${x} ^ ${y} = ${hasil}<br/>`)
+        
+        //==> ==> Negasi
+        var hasil = ~x;
+        document.write(`~${x} = ${hasil}<br/>`)
+        
+        //==> ==> Right Shift >>
+        var hasil = x >> y;
+        document.write(`${x} >> ${y} = ${hasil}<br/>`)
+        
+        //==> ==> Left Shift <<
+        var hasil = x << y;
+        document.write(`${x} << ${y} = ${hasil}<br/>`)
+        
+        //==> ==> Right Shift (unasigned) >>>
+        var hasil = x >>> y;
+        document.write(`${x} >>> ${y} = ${hasil}<br/>`)
+        document.write("<br/>")
+
+        //==> Operator ternary (--kondisi-- ? "True" : "False")
+        var pertanyaan = confirm("Apakah anda berumur diatas 18 tahun?");
+
+        var hasil = pertanyaan ? "Selamat datang" : "Jangan di sini, dek";
+        document.write(hasil);
+
+    </script>
+</body>
+</html>
